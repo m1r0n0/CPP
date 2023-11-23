@@ -25,9 +25,7 @@ using namespace std;
         Experience = s.Experience();
         cout << "Constructor called by object " << Name() << endl;
     };
-    SERVANT::~SERVANT() {
-        cout << "Destructor called by object " << this->Name() << endl;
-    };
+    SERVANT::~SERVANT() {};
 
     //Functions
     void SERVANT::skip_years()
@@ -58,6 +56,14 @@ using namespace std;
         cout << endl << endl;
 
         return new SERVANT(name, age, experience);
+    }
+
+    SERVANT* SERVANT::make_one_year_younger(SERVANT & s) {
+        SERVANT* temp_servant = new SERVANT(s);
+        temp_servant->Age = s.Age() - 1;
+        cout << "Made servant younger!" << endl << endl;
+
+        return temp_servant;
     }
 
     void SERVANT::print_servant(SERVANT* s) {

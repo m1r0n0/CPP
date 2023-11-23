@@ -19,6 +19,8 @@ public:
     //Functions
     void skip_years();
 
+    static SERVANT* make_one_year_younger(SERVANT &);
+
     static SERVANT* create_new_servant();
 
     static void print_servant(SERVANT* s);
