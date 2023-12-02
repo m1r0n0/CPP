@@ -4,14 +4,14 @@
 class SERVANT {
 public:
     //Properties
-    PROPERTY<char*> Name;
+    char* Name;
     PROPERTY<int> Age;
     PROPERTY<int> Experience;
 
     //Constructors
     SERVANT();
-    SERVANT(char* name, int age, int experience);
-    SERVANT(SERVANT& s);
+    SERVANT(char*, int, int);
+    SERVANT(SERVANT&);
 
     //Destructor
     ~SERVANT();
@@ -23,5 +23,5 @@ public:
 
     static SERVANT* create_new_servant();
 
-    static void print_servant(SERVANT* s);
+    static void print_servant(SERVANT*);
 };

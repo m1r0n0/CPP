@@ -3,29 +3,25 @@
 
 using namespace std;
 
-    //Properties
-    PROPERTY<char*> Name;
-    PROPERTY<int> Age;
-    PROPERTY<int> Experience;
+	const char* def_name = "Vasya";
 
     //Constructors
-    SERVANT::SERVANT()
+    SERVANT::SERVANT() : SERVANT((char*)def_name, 20, 3)
     {
         cout << "Empty constructor called " << endl;
     };
 	SERVANT::SERVANT(char* name, int age, int experience) {
-        Name = name;
+        Name = new char[sizeof(name) + 1];
+        strcpy(Name, name);
         Age = age;
         Experience = experience;
-        cout << "Constructor called by object " << Name() << endl;
+        cout << "Constructor called by object " << Name << endl;
+	};
+    SERVANT::SERVANT(SERVANT& s) : SERVANT(s.Name, s.Age(), s.Experience()){};
+    SERVANT::~SERVANT()
+    {
+	    delete Name;
     };
-    SERVANT::SERVANT(SERVANT& s) {
-        Name = s.Name();
-        Age = s.Age();
-        Experience = s.Experience();
-        cout << "Constructor called by object " << Name() << endl;
-    };
-    SERVANT::~SERVANT() {};
 
     //Functions
     void SERVANT::skip_years()
@@ -67,5 +63,5 @@ using namespace std;
     }
 
     void SERVANT::print_servant(SERVANT* s) {
-        cout << "Servant: \nName: " << s->Name() << ",\nAge: " << s->Age() << ",\nExperience: " << s->Experience() << ";\n\n";
+        cout << "Servant: \nName: " << s->Name << ",\nAge: " << s->Age() << ",\nExperience: " << s->Experience() << ";\n\n";
     }
