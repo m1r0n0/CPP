@@ -1,2 +1,6 @@
-﻿  main.cpp
+﻿  PROPERTY.cpp
+  SERVANT.cpp
+D:\My\Олександр\Documents\##VNTU\3 курс\1 семестр\ОС\CPP\Lab5\SERVANT.cpp(15,9): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  main.cpp
+  Generating Code...
   Lab5.vcxproj -> D:\My\Олександр\Documents\##VNTU\3 курс\1 семестр\ОС\CPP\x64\Debug\Lab5.exe
