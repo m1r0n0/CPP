@@ -6,4 +6,5 @@ class engineer :
 {
 public:
 	using employee::employee;
+	virtual void print();
 };

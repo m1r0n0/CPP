@@ -7,9 +7,18 @@
 
 using namespace std;
 
+staff* s_ = new staff();
+staff* staff::begin_ = s_;
+
 int main()
 {
-	auto s = new engineer("bob", 20, 2);
-	
-	cout << s->Name << s->Age << s->Experience;
+	servant serv("jack", 23, 3);
+	employee empl ("rob", 25, 6);
+	engineer engin("chris", 30, 10);
+
+	serv.add();
+	empl.add();
+	engin.add();
+
+	staff::show();
 }

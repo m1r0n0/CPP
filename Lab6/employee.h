@@ -6,4 +6,5 @@ class employee :
 {
 public:
 	using servant::servant;
+	virtual void print();
 };
