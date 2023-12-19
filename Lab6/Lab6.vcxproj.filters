@@ -12,35 +12,59 @@
     <Filter Include="Classes Files">
       <UniqueIdentifier>{7d402615-e350-468d-8ce0-740388752c81}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Staff">
+      <UniqueIdentifier>{1bdbfb67-3b14-4820-acfa-d64ead8a1153}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Groups">
+      <UniqueIdentifier>{113db0ca-418d-40ca-9193-7a64b3ae26c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Staff">
+      <UniqueIdentifier>{35eecac6-2490-4436-8377-ab774ec6e2d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Groups">
+      <UniqueIdentifier>{3b41125b-60c8-47df-bec3-5714ec4dda4d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="staff.cpp">
-      <Filter>Classes Files</Filter>
-    </ClCompile>
-    <ClCompile Include="servant.cpp">
-      <Filter>Classes Files</Filter>
-    </ClCompile>
     <ClCompile Include="employee.cpp">
-      <Filter>Classes Files</Filter>
+      <Filter>Classes Files\Staff</Filter>
     </ClCompile>
     <ClCompile Include="engineer.cpp">
-      <Filter>Classes Files</Filter>
+      <Filter>Classes Files\Staff</Filter>
+    </ClCompile>
+    <ClCompile Include="servant.cpp">
+      <Filter>Classes Files\Staff</Filter>
+    </ClCompile>
+    <ClCompile Include="staff.cpp">
+      <Filter>Classes Files\Staff</Filter>
+    </ClCompile>
+    <ClCompile Include="TObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="department.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="staff.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Staff</Filter>
     </ClInclude>
     <ClInclude Include="servant.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="employee.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Staff</Filter>
     </ClInclude>
     <ClInclude Include="engineer.h">
+      <Filter>Header Files\Staff</Filter>
+    </ClInclude>
+    <ClInclude Include="employee.h">
+      <Filter>Header Files\Staff</Filter>
+    </ClInclude>
+    <ClInclude Include="TObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="department.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

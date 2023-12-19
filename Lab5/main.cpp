@@ -18,12 +18,15 @@ int main()
 
     //Servant array in static memory
     cout << "Static array ---------------------" << endl;
-    SERVANT* department[2];
+    SERVANT* department[3];
     department[0] = (new SERVANT((char*)"Bob", 33, 12));
     department[1] = (new SERVANT((char*)"Qwe", 28, 6));
+    department[2] = (new SERVANT(*department[0]));
+
 
     (*print)(department[0]);
     (*print)(department[1]);
+    (*print)(department[2]);
 
 
     //Servant array in dynamic memory
@@ -51,6 +54,7 @@ int main()
     delete s;
     delete department[0];
     delete department[1];
+    delete department[2];
     delete[] dynamic_department;
 
     return 0;
